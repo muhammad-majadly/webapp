@@ -1,0 +1,112 @@
+body{
+	
+	font-family:sans-serif;
+	margin:0;
+	padding:0;
+    background: rgba(0, 0, 0, 0) url("../img/body-background.jpg") no-repeat fixed center center / cover ;
+}
+
+
+header {
+	height: 70px;
+	width: 100%;	
+	background: black;
+}
+
+.layout-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding: 25px 10px 5px; 10px;
+}
+.page-body {
+    background: rgba(84, 84, 84, 0.4);
+}
+.search-box {
+	float: right;
+	padding-top: 5px;
+}
+.nav-section{
+	display: inline-block;
+	width: 32%;
+	margin-right: 0.5em;
+
+}
+.nav-section > p{
+	color: white;
+	margin: 10px;	
+	text-align:center;
+}
+.nav1{
+	 background: url("../img/icons/action-report-new.png") left 50% top 60px no-repeat black;
+	 margin-left: 7px;
+}
+
+.nav2{
+	 background: url("../img/icons/action-report-top.png") left 50% top 60px no-repeat black;
+}
+
+.nav3{
+	 background: url("../img/icons/actions-help.png") left 50% top 60px no-repeat black;
+}
+
+.menu {
+    margin-top: 80px;
+    background-color: #fff;
+    padding: 1px;
+}
+.menu-caption {
+    font-size: 12px;
+    color: black;
+    margin-left: 4%;
+    margin-bottom: 1px;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+}
+.action-list {
+    display: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: 153px;
+    z-index: 1;
+    list-style-type: none;
+    margin-top: 0px;
+}
+
+.tabs-ul{
+	margin-left:1%;
+	padding: 0;
+	margin-right: 0%
+}
+.tabs-ul>li {
+	display: inline-block;
+	background-color: #615E5E;
+	width: 20%;
+	padding: 1%;
+    text-align: center;
+    margin-right: 2%;
+
+
+}
+
+.tabs-ul>li >a {
+	color: white;
+	margin-right:5px; 
+	text-decoration: none;
+
+	
+}
+
+#quick-reports{
+
+}
+#reports-iframe {
+    height: 500px;
+    width: 97.1%;
+    margin-left: 1.3%;
+    padding-top: 40px;
+    background-color: #E4E2E2;
+
+}
