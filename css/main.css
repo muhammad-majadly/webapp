@@ -82,7 +82,7 @@ header {
 }
 .tabs-ul>li {
 	display: inline-block;
-	background-color: #615E5E;
+	background-color: #615E5E; 
 	width: 20%;
 	padding: 1%;
     text-align: center;
