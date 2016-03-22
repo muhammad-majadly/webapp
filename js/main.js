@@ -24,9 +24,11 @@ function updateActions (data) {
   var navSections = all(".nav-section");
   for (var i = 0; i < navSections.length; i++) {
     // set header for every nav-section
+    if(quickActions[i].label  !==undefined){
     navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
+		}
     // set background for every nav-section
-    navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
+   // navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
   }
 }
 
