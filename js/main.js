@@ -28,6 +28,7 @@ function updateActions (data) {
   }
 
 }
+}
 
 
 
