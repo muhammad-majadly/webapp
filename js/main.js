@@ -16,6 +16,7 @@ function updateNotification (notification) {
 }
 
 function updateActions (data) {
+	if(notification !==undefined){
 	
   // get the quick action data from json file
   var quickActions=data.quickActions;
@@ -27,6 +28,7 @@ function updateActions (data) {
     // set background for every nav-section
     navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
   }
+}
 
 }
 
