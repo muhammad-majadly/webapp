@@ -16,7 +16,7 @@ function updateNotification (notification) {
 }
 
 function updateActions (data) {
-	if(notification !==undefined){
+	if(data !==undefined){
 	
   // get the quick action data from json file
   var quickActions=data.quickActions;
