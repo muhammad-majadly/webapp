@@ -14,6 +14,12 @@ function updateNotification (notification) {
 		$(".notifications").innerHTML = notification;
 	}
 }
+function updateNotification (quickActions) {
+	if(notification !==undefined){
+		$(".nav-section").innerHTML = quickActions ;
+	}
+}
+
 
 
 function hideElem1()
@@ -80,6 +86,10 @@ function loadPageData(response){
 	updateNotification(response.notification);
 		
 }
+function loadQuickActions(response){
+	updateNotification(response.quickActions);
+		
+}
 function tempLoadDataFromJson(data){
 	updateNotification(data.notification);
 	updateNavsections(data.quickActions);
@@ -89,6 +99,7 @@ function init()
 {
 	document.getElementById("reports-iframe").style.visibility = "hidden";
 	UTILS.ajax("data/config.json",{done:loadPageData});
+
 
 }
 
