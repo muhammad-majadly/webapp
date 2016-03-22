@@ -14,8 +14,9 @@ function updateNotification (notification) {
 		$(".notifications").innerHTML = notification;
 	}
 }
+
 function updateActions (data) {
-	var fillMenu=function(data){
+	
   // get the quick action data from json file
   var quickActions=data.quickActions;
   // select all navs sections
@@ -28,7 +29,7 @@ function updateActions (data) {
   }
 
 }
-}
+
 
 
 
