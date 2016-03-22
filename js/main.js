@@ -14,10 +14,19 @@ function updateNotification (notification) {
 		$(".notifications").innerHTML = notification;
 	}
 }
-function updateNotification (quickActions) {
-	if(notification !==undefined){
-		$(".nav-section").innerHTML = quickActions ;
-	}
+function updateActions (data) {
+	var fillMenu=function(data){
+  // get the quick action data from json file
+  var quickActions=data.quickActions;
+  // select all navs sections
+  var navSections = all(".nav-section");
+  for (var i = 0; i < navSections.length; i++) {
+    // set header for every nav-section
+    navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
+    // set background for every nav-section
+    navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
+  }
+
 }
 
 
@@ -86,22 +95,27 @@ function loadPageData(response){
 	updateNotification(response.notification);
 		
 }
-function loadQuickActions(response){
-	updateNotification(response.quickActions);
+function loadQuickActions(data){
+	updateActions(data.quickActions);
 		
 }
 function tempLoadDataFromJson(data){
 	updateNotification(data.notification);
-	updateNavsections(data.quickActions);
+	updateActions(data.quickActions);
 		
 }
 function init()
 {
 	document.getElementById("reports-iframe").style.visibility = "hidden";
 	UTILS.ajax("data/config.json",{done:loadPageData});
+	UTILS.ajax("data/config.json",{done:loadQuickActions});
 
 
 }
+
+
+
+
 
 window.onLoad = init();
 	  
