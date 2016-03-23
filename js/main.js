@@ -15,24 +15,7 @@ function updateNotification (notification) {
 	}
 }
 
-function updateActions (data) {
-	if(data !==undefined){
-	
-  // get the quick action data from json file
-  var quickActions=data.quickActions;
-  // select all navs sections
-  var navSections = all(".nav-section");
-  for (var i = 0; i < navSections.length; i++) {
-    // set header for every nav-section
-    if(quickActions[i].label  !==undefined){
-    navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
-		}
-    // set background for every nav-section
-   // navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
-  }
-}
 
-}
 
 
 
