@@ -182,7 +182,36 @@ nav{
 	    margin-top: -16.5px;
 
 }
+
+
+#my-folders{
+        background-color: #E4E2E2;
+        padding-top:26px;
+        margin-top: -16.5px;
+}
+                
+#my-team-folders{
+        background-color: #E4E2E2;
+        padding-top:26px;
+        margin-top: -16.5px;
+}
+          
+
+#public-folders{
+        background-color: #E4E2E2;
+        padding-top:26px;
+        margin-top: -16.5px;
+}
 #reports-iframe {
+    height: 500px;
+    width: 97.1%;
+    margin-left: 1.3%;
+    padding-top: 0px;
+    border: none;
+
+}
+
+#reports-iframe2 {
     height: 500px;
     width: 97.1%;
     margin-left: 1.3%;

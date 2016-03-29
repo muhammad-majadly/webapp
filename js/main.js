@@ -76,42 +76,82 @@ function myFolder()
 {
  	
  	//document.getElementById('quick-reports').innerHTML='<h2>HelloWorld</h2>';
+ 		document.getElementById("my-folders").style.display = "block";
+	    document.getElementById('quick-reports').style.display = "none";
+	    document.getElementById("public-folders").style.display = "none";
+	    document.getElementById("my-team-folders").style.display = "none";
 
-	    document.getElementById('choose-sites').style.display = "none";
-	    document.getElementById("reports-iframe").style.visibility = "visible";
-
-	    if(document.getElementById("tab-one").className == "tabs-li") 
+	   if(document.getElementById("tab-2").className == "tabs-li") 
 	    {
-	    	document.getElementById("tab-one").className += " active";
+	    	document.getElementById("tab-2").className += " active";
+	    	document.getElementById("tab-1").className = "tabs-li";
+	    	document.getElementById("tab-4").className = "tabs-li";
+	    	document.getElementById("tab-3").className = "tabs-li";
 	    }
-	    else
-	    {
-	    	document.getElementById("tab-one").className = "tabs-li";
-	    }
-	    
-	    
 
+	    
 }
+
+ function publicFolders()
+ {
+ 		document.getElementById("public-folders").style.display = "block";
+ 		document.getElementById('quick-reports').style.display = "none";
+	    document.getElementById("my-folders").style.display = "none";
+	    document.getElementById("my-team-folders").style.display = "none";
+
+	   if(document.getElementById("tab-4").className == "tabs-li") 
+	    {
+	    	document.getElementById("tab-4").className += " active";
+	    	document.getElementById("tab-1").className = "tabs-li";
+	    	document.getElementById("tab-2").className = "tabs-li";
+	    	document.getElementById("tab-3").className = "tabs-li";
+	    }
+
+		
+ }
 
 function quickReport()
 {
  	
  	//document.getElementById('quick-reports').innerHTML='<h2>HelloWorld</h2>';
+ 	document.getElementById("reports-iframe").style.visibility = "hidden";
+	    document.getElementById('quick-reports').style.display = "block";
+	    document.getElementById("my-folders").style.display = "none";
+	    document.getElementById("public-folders").style.display = "none";
+	    document.getElementById("my-team-folders").style.display = "none";
 
-	    document.getElementById('choose-sites').style.display = "block";
-	    document.getElementById("reports-iframe").style.visibility = "hidden"; 
 
-	    if(document.getElementById("tab-one").className == "tabs-li") 
+	    if(document.getElementById("tab-1").className == "tabs-li") 
 	    {
-	    	document.getElementById("tab-one").className += " active";
+	    	document.getElementById("tab-1").className += " active";
+	    	document.getElementById("tab-4").className = "tabs-li";
+	    	document.getElementById("tab-2").className = "tabs-li";
+	    	document.getElementById("tab-3").className = "tabs-li";
 	    }
-	    else
-	    {
-	    	document.getElementById("tab-one").className = "tabs-li";
-	    }
-	    
 
 }
+
+function myTeamFolders()
+{
+
+		document.getElementById("my-team-folders").style.display = "block";
+		document.getElementById("reports-iframe2").style.visibility = "hidden";
+		document.getElementById('quick-reports').style.display = "none";
+	    document.getElementById("my-folders").style.display = "none";
+	    document.getElementById("public-folders").style.display = "none";
+	    
+
+
+	    if(document.getElementById("tab-3").className == "tabs-li") 
+	    {
+	    	document.getElementById("tab-3").className += " active";
+	    	document.getElementById("tab-1").className = "tabs-li";
+	    	document.getElementById("tab-2").className = "tabs-li";
+	    	document.getElementById("tab-4").className = "tabs-li";
+	    }
+}
+
+
 
 function loadPageData(response){
 	updateNotification(response.notification);
@@ -128,13 +168,15 @@ function loadQuickActions(data){
 }*/
 function init()
 {
-	document.getElementById("reports-iframe").style.visibility = "hidden";
+	quickReport();
+
 	UTILS.ajax("data/config.json",{done:loadPageData});
 	UTILS.ajax("data/config.json",{done:loadQuickActions});
 
 
 }
 
+// var ref=this.hash || window.location.hash;
 
 
 

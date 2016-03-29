@@ -68,10 +68,10 @@
 
 		<section class="tabs">
 			<ul class="tabs-ul">
-				<li class="tabs-li" id="tab-one" onclick="quickReport()"><a href="#quick-reports">Quick Reports</a></li>
-				<li class="tabs-li" id="tab-one" onclick="myFolder()"><a href="#my-folders">My Folders</a></li>
-				<li class="tabs-li" id="tab-one" onclick="quickReport()"><a href="#my-team-folders">My Team Folders</a></li>
-				<li class=" tabs-li" id="tab-one" onclick="myFolder()"><a href="#public-folders">Public Folders</a></li>
+				<li class="tabs-li" id="tab-1" onclick="quickReport()"><a href="#quick-reports">Quick Reports</a></li>
+				<li class="tabs-li" id="tab-2" onclick="myFolder()"><a href="#my-folders">My Folders</a></li>
+				<li class="tabs-li" id="tab-3" onclick="myTeamFolders()"><a href="#my-team-folders">My Team Folders</a></li>
+				<li class=" tabs-li" id="tab-4" onclick="publicFolders()"><a href="#public-folders">Public Folders</a></li>
 			</ul>
 
 			<div id="quick-reports">
@@ -119,17 +119,62 @@
                           <input id="submit-quickrports" value="Save" type="submit">
                      </div>
 				</div>
-				<iframe src="http://www.paulirish.com" id="reports-iframe">
-				</iframe>
+				<iframe src="http://www.paulirish.com" id="reports-iframe"></iframe>
 			</div>
 
 			<div id="my-folders">
+				<iframe src="http://www.paulirish.com" id="reports-iframe"></iframe>
 			</div>
 
 			<div id="my-team-folders">
+								<img src="img/icons/settings.png" alt="settings button" onclick="hideElem1()" class="btn-settings" >
+				<div class="choose-site" id="choose-sites">
+					<div class="fieldset">
+						<div class="report ss">Reprot 01</div>
+						<div class="ss">
+	                     	<label class="label-n " for="">Name</label>  
+	                        <input class="field-input f1" placeholder="Name" id="" type="text">	
+                        </div>
+                        <div class="ss">
+	                     	<label class="label-u " for="">URL</label>  
+	                        <input class="field-input f2" placeholder="URL" id="url" type="text">	
+                        </div>
+						
+					</div>
+					<div class="fieldset">
+						<div class="report ss">Reprot 02</div>
+						<div class="ss">
+	                     	<label class="label-n " for="">Name</label>  
+	                        <input class="field-input f1" placeholder="Name" id="rr" type="text">	
+                        </div>
+                        <div class="ss">
+	                     	<label class="label-u " for="">URL</label>  
+	                        <input class="field-input f2" placeholder="URL" id="" type="text">	
+                        </div>
+						
+					</div>
+					<div class="fieldset">
+						<div class="report ss">Reprot 03</div>
+						<div class="ss">
+	                     	<label class="label-n " for="">Name</label>  
+	                        <input class="field-input f1" placeholder="Name" id="" type="text">	
+                        </div>
+                        <div class="ss">
+	                     	<label class="label-u " for="">URL</label>  
+	                        <input class="field-input f2" placeholder="URL" id="" type="text">	
+                        </div>
+						
+					</div>
+					<div class="save">
+                          <input id="cancel-button-quickreports" value="Cancel" type="submit">           
+                          <input id="submit-quickrports" value="Save" type="submit">
+                     </div>
+				</div>
+				<iframe src="http://www.paulirish.com" id="reports-iframe2"></iframe>
 			</div>
 
 			<div id="public-folders">
+				<iframe src="https://addyosmani.com/" id="reports-iframe"></iframe>
 			</div>
 		</section>
 	</section>
