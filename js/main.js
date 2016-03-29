@@ -15,6 +15,39 @@ function updateNotification (notification) {
 	}
 }
 
+function updateActions (data) {
+	if(data !==undefined){
+		
+	
+
+  // get the quick action data from json file
+  var quickActions=data.quickActions;
+  // select all navs sections
+  var navSections = all(".nav-section");
+  for (var i = 0; i < navSections.length; i++) {
+    // set header for every nav-section
+    navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
+    // set background for every nav-section
+    navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
+  }
+
+  var menuCaptions = all(".menu-caption");
+  for (var i = 0; i < menuCaptions.length; i++) {
+    // menu header
+    menuCaptions[i].innerHTML = "<p>" + quickActions[i].actionsLabel + "</p>";
+  }
+
+  var actionLists = all(".action-list");
+  for (var i = 0; i < actionLists.length; i++) {
+    actions = quickActions[i].actions;
+    for (var j = 0; j < actions.length; j++) {
+      // set links
+      actionLists[i].innerHTML += "<li><a href=\"" + actions[j].url + "\">" + actions[j].label + "</a></li>"
+    }
+  }
+
+}
+}
 
 
 
@@ -85,14 +118,14 @@ function loadPageData(response){
 		
 }
 function loadQuickActions(data){
-	updateActions(data.quickActions);
+	updateActions(data);
 		
 }
-function tempLoadDataFromJson(data){
+/*function tempLoadDataFromJson(data){
 	updateNotification(data.notification);
 	updateActions(data.quickActions);
 		
-}
+}*/
 function init()
 {
 	document.getElementById("reports-iframe").style.visibility = "hidden";
