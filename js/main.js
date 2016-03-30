@@ -152,7 +152,14 @@ function myTeamFolders()
 	    }
 }
 
-
+function saveUrl() {
+	// body...
+	
+	var v1=document.getElementById('url1').value;
+	document.getElementById('reports-iframe').src=v1;
+	document.getElementById("reports-iframe").style.visibility = "visible";
+	document.getElementById("choose-sites").style.display = "none";
+}
 
 function loadPageData(response){
 	updateNotification(response.notification);
