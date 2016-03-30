@@ -94,8 +94,9 @@ function myFolder()
 
  function publicFolders()
  {
+ 
  		document.getElementById("public-folders").style.display = "block";
- 		document.getElementById('quick-reports').style.display = "none";
+ 		document.getElementById("quick-reports").style.display = "none";
 	    document.getElementById("my-folders").style.display = "none";
 	    document.getElementById("my-team-folders").style.display = "none";
 
@@ -133,6 +134,7 @@ function quickReport()
 
 function myTeamFolders()
 {
+	
 
 		document.getElementById("my-team-folders").style.display = "block";
 		document.getElementById("reports-iframe2").style.visibility = "hidden";
@@ -140,7 +142,6 @@ function myTeamFolders()
 	    document.getElementById("my-folders").style.display = "none";
 	    document.getElementById("public-folders").style.display = "none";
 	    
-
 
 	    if(document.getElementById("tab-3").className == "tabs-li") 
 	    {
@@ -168,10 +169,27 @@ function loadQuickActions(data){
 }*/
 function init()
 {
-	quickReport();
+	var ref=this.hash || window.location.hash;
+	if (ref=="#my-team-folders") {
+		myTeamFolders();
+	}
+	if (ref=="#quick-reports") {
+		quickReport();
+	}
+
+	if (ref=="#my-folders") {
+		myFolder();
+	}
+
+	if (ref=="#public-folders") {
+		publicFolders();
+	}
+	
+	
 
 	UTILS.ajax("data/config.json",{done:loadPageData});
 	UTILS.ajax("data/config.json",{done:loadQuickActions});
+
 
 
 }

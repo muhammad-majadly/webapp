@@ -55,19 +55,16 @@ nav{
 	padding: 0;
 }
 .nav1{
-	 background: url("../img/icons/action-report-new.png") left 50% top 60px no-repeat black;
 	 margin-right: 1.4%;
 	 margin-left: 1%;
 
 }
 
 .nav2{
-	 background: url("../img/icons/action-report-top.png") left 50% top 60px no-repeat black;
 	 margin-right: 1.4%;
 }
 
 .nav3{
-	 background: url("../img/icons/actions-help.png") left 50% top 60px no-repeat black;
 }
 
 .menu {
@@ -168,12 +165,10 @@ nav{
 }
 
 
-.tabs-ul>li >a {
+.tabs-ul a >li {
 	color: white;
-	margin-right:0px; 
-	text-decoration: none;
-
-	
+     margin-right: 1.1%;
+	text-decoration: none;	
 }
 
 #quick-reports{
