@@ -155,9 +155,19 @@ nav{
 {
     float: right;
     margin-right: 20px;
-    width: 29px;
+    width: 22px;
     cursor: pointer;
     margin-top: -13px;
+}
+
+.btn-expand
+{
+     float: right;
+    margin-right: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: -13px;
+    margin-bottom:7px;   
 }
 .btn-settings:hover,.active 
 {
@@ -177,7 +187,12 @@ nav{
 	    margin-top: -16.5px;
 
 }
-
+.adresses{
+    margin-left: 1.2%;
+    width: 20%;
+    height: 30px;
+    margin-bottom: 5px;
+}
 
 #my-folders{
         background-color: #E4E2E2;

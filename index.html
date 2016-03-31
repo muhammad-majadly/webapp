@@ -75,17 +75,24 @@
 			</ul>
 
 			<div id="quick-reports">
-			
-				<img src="img/icons/settings.png" alt="settings button" onclick="hideElem1()" class="btn-settings" >
+				
+				<select class="adresses" name="adresses" id="adresses-quickreports">
+	                <option value="" id="n1"></option>
+	                <option value="" id="n2"></option>
+	                <option value="" id="n3"></option>
+                </select>
+
+				<a href="" target="_blank" id="href"><img src="img/icons/expand.png" alt="expand button" onclick="expand()" class="btn-expand" ></a>
+				<img src="img/icons/settings.png" alt="settings button" onclick="hideElem1()" class="btn-settings">
 				<div class="choose-site" id="choose-sites">
 					<div class="fieldset">
 						<div class="report ss">Reprot 01</div>
 						<div class="ss">
-	                     	<label class="label-n " for="">Name</label>  
-	                        <input class="field-input f1" placeholder="Name" id="" type="text">	
+	                     	<label class="label-n" for="">Name</label>  
+	                        <input class="field-input f1" placeholder="Name" id="name1" type="text">	
                         </div>
                         <div class="ss">
-	                     	<label class="label-u " for="">URL</label>  
+	                     	<label class="label-u" for="">URL</label>  
 	                        <input class="field-input f2" placeholder="URL" id="url1" type="text">	
                         </div>
 						
@@ -123,21 +130,31 @@
 			</div>
 
 			<div id="my-folders">
+				<a href="http://www.paulirish.com" target="_blank"><img src="img/icons/expand.png" alt="expand button" onclick="" class="btn-expand" ></a>
 				<iframe src="http://www.paulirish.com" id="reports-iframe"></iframe>
 			</div>
 
 			<div id="my-team-folders">
-								<img src="img/icons/settings.png" alt="settings button" onclick="hideElem1()" class="btn-settings" >
-				<div class="choose-site" id="choose-sites">
+				
+				<select class="adresses" name="adresses" id="adresses-quickreports">
+	                <option value="" id="n1"></option>
+	                <option value="" id="n2"></option>
+	                <option value="" id="n3"></option>
+                </select>
+
+				<a href="" target="_blank" id="href"><img src="img/icons/expand.png" alt="expand button" onclick="expand()" class="btn-expand" ></a>
+				<img src="img/icons/settings.png" alt="settings button" onclick="hideElem2()" class="btn-settings">
+				<div class="choose-site" id="choose-sites2">
+
 					<div class="fieldset">
 						<div class="report ss">Reprot 01</div>
 						<div class="ss">
-	                     	<label class="label-n " for="">Name</label>  
-	                        <input class="field-input f1" placeholder="Name" id="" type="text">	
+	                     	<label class="label-n" for="">Name</label>  
+	                        <input class="field-input f1" placeholder="Name" id="name1" type="text">	
                         </div>
                         <div class="ss">
-	                     	<label class="label-u " for="">URL</label>  
-	                        <input class="field-input f2" placeholder="URL" id="url" type="text">	
+	                     	<label class="label-u" for="">URL</label>  
+	                        <input class="field-input f2" placeholder="URL" id="url1" type="text">	
                         </div>
 						
 					</div>
@@ -167,14 +184,15 @@
 					</div>
 					<div class="save">
                           <input id="cancel-button-quickreports" value="Cancel" type="submit">           
-                          <input id="submit-quickrports" value="Save" type="submit">
+                          <input id="submit-quickrports" onclick="saveUrl()" value="Save" type="submit">
                      </div>
 				</div>
-				<iframe src="http://www.paulirish.com" id="reports-iframe2"></iframe>
+				<iframe src="" id="reports-iframe2"></iframe>
 			</div>
 
 			<div id="public-folders">
-				<iframe src="https://addyosmani.com/" id="reports-iframe"></iframe>
+				<a href="http://www.addyosmani.com" target="_blank"><img src="img/icons/expand.png" alt="expand button" onclick="" class="btn-expand" ></a>
+				<iframe src="https://addyosmani.com" id="reports-iframe"></iframe>
 			</div>
 		</section>
 	</section>
