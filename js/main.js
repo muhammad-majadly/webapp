@@ -104,6 +104,7 @@ function hideElem2()
 
 function myFolder()
 {
+
  	
  	//document.getElementById('quick-reports').innerHTML='<h2>HelloWorld</h2>';
  		document.getElementById("my-folders").style.display = "block";
@@ -118,6 +119,8 @@ function myFolder()
 	    	document.getElementById("tab-4").className = "tabs-li";
 	    	document.getElementById("tab-3").className = "tabs-li";
 	    }
+
+	   window.location.href = "#my-folders";
 
 	    
 }
@@ -138,6 +141,7 @@ function myFolder()
 	    	document.getElementById("tab-3").className = "tabs-li";
 	    }
 
+	    window.location.href = "#public-folders";
 		
  }
 
@@ -163,6 +167,8 @@ function quickReport()
 	    	document.getElementById("tab-3").className = "tabs-li";
 	    }
 
+	    window.location.href = "#quick-reports";
+
 }
 
 function myTeamFolders()
@@ -184,6 +190,8 @@ function myTeamFolders()
 	    	document.getElementById("tab-2").className = "tabs-li";
 	    	document.getElementById("tab-4").className = "tabs-li";
 	    }
+
+	    window.location.href = "#my-team-folders";
 }
 
 function saveUrl() {
@@ -211,11 +219,25 @@ function loadQuickActions(data){
 	updateActions(data);
 		
 }
-/*function tempLoadDataFromJson(data){
-	updateNotification(data.notification);
-	updateActions(data.quickActions);
-		
-}*/
+
+
+
+/*$(function() {
+    $(document).keyup(function(e) {
+        switch(e.keyCode) {
+            case 37 : alert('r');
+                break;
+            case 39 : alert('l');
+                break; 
+        }
+    });
+});*/
+
+
+
+
+
+
 function init()
 {
 	var flag=0;
@@ -251,6 +273,73 @@ function init()
 
 
 }
+
+
+document.addEventListener('keyup' , function(e){
+	var flag=0;
+	var ref=this.hash || window.location.hash;
+    switch (e.keyCode) {
+        case 37:{
+	if (ref=="#quick-reports") {
+		flag=1;
+	}
+
+	if (ref=="#my-folders") {
+		quickReport();
+		flag=1;
+	}	  				
+
+	if (ref=="#my-team-folders") {
+
+		myFolder();
+		flag=1;
+	}
+
+	if (ref=="#public-folders") {
+		myTeamFolders();
+		flag=1;
+	}
+
+	if (flag==0) 
+	{
+		
+	}
+            break;
+        }
+        case 39:{
+	 			
+
+	if (ref=="#quick-reports") {
+		myFolder();
+		flag=1;
+	}
+
+	if (ref=="#my-folders") {
+		myTeamFolders();
+		flag=1;
+	}	  				
+
+	if (ref=="#my-team-folders") {
+		publicFolders();
+		flag=1;
+	}
+
+	if (ref=="#public-folders") {
+
+		flag=1;
+	}
+
+	if (flag==0) 
+	{
+		myFolder();
+	}
+            break;
+        }
+    }
+});
+
+
+
 
 
 /*
