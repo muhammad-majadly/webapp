@@ -342,13 +342,13 @@ document.addEventListener('keyup' , function(e){
 
 
 
-/*
+
 function savelinksReports () {
     var names=[];
     var url=[];
     var array=[];
-    names = all(".reportname");
-    url = all(".reporturl");
+    names = all(".name1");
+    url = all(".url1");
 
     
     for (var i=0;i<3;i++)
@@ -376,13 +376,14 @@ function savelinksReports () {
         });
         }
     }
-    $("#quick-reports-adress").innerHTML="";
+    
+    $("#adresses-quickreports").innerHTML="";
      for (i=0;i<3;i++)
     {
         linkarray[i].name=array[i].name;
         linkarray[i].url=array[i].url;
         if(array[i].name!="" && array[i].url!="" ){
-            $("#quick-reports-adress").innerHTML+="<option value='"+linkarray[i].url+"'>"+linkarray[i].name+"</option>";
+            $("#adresses-quickreports").innerHTML+="<option value='"+linkarray[i].url+"'>"+linkarray[i].name+"</option>";
         }
     }
     localStorage.setItem("linkarray" , JSON.stringify(linkarray));
@@ -393,7 +394,7 @@ function savelinksReports () {
 }
 
 
-*/
+
 
 
 
