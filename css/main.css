@@ -123,9 +123,7 @@ nav{
 .nav1:hover .action-list  {
     display: block;
 }
-.nav-section:hover .menu-caption:after,.nav-section:focus .menu-caption:after{
-    transform: rotate(180deg);
-}
+
 .nav2:hover .action-list {
     display: block;
 }
