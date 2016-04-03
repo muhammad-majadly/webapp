@@ -191,15 +191,92 @@ function myTeamFolders()
 function saveUrl() {
 	// body...
 	
-	var url=document.getElementById('url1').value;
-	var name=document.getElementById('name1').value;
+	var url1=document.getElementById('url1').value;
+	var name1=document.getElementById('name1').value;
 
-	document.getElementById('reports-iframe').src=url;
-	document.getElementById('href').href=url;
-	document.getElementById('n1').innerHTML=name;
+	var url2=document.getElementById('url2').value;
+	var name2=document.getElementById('name2').value;
 
-	document.getElementById("reports-iframe").style.visibility = "visible";
-	document.getElementById("choose-sites").style.display = "none";
+	var url3=document.getElementById('url3').value;
+	var name3=document.getElementById('name3').value;
+
+	var url4=document.getElementById('url4').value;
+	var name4=document.getElementById('name4').value;
+
+	var url5=document.getElementById('url5').value;
+	var name5=document.getElementById('name5').value;
+
+	var url6=document.getElementById('url6').value;
+	var name6=document.getElementById('name6').value;
+
+
+
+
+	if(name1!=""&& url1!="")
+	{
+		document.getElementById('reports-iframe').src=url1;
+		document.getElementById('href1').href=url1;
+		document.getElementById('n1').innerHTML=name1;
+
+		document.getElementById("reports-iframe").style.visibility = "visible";
+		document.getElementById("choose-sites").style.display = "none";
+
+	}
+
+		if(name2!=""&& url2!="")
+	{
+		document.getElementById('reports-iframe').src=url2;
+		document.getElementById('href1').href=url2;
+		document.getElementById('n1').innerHTML=name2;
+
+		document.getElementById("reports-iframe").style.visibility = "visible";
+		document.getElementById("choose-sites").style.display = "none";
+
+	}
+
+		if(name3!=""&& url3!="")
+	{
+		document.getElementById('reports-iframe').src=url3;
+		document.getElementById('href1').href=url3;
+		document.getElementById('n1').innerHTML=name3;
+
+		document.getElementById("reports-iframe").style.visibility = "visible";
+		document.getElementById("choose-sites").style.display = "none";
+
+	}
+
+	if(name4!=""&& url4!="")
+	{
+		document.getElementById('reports-iframe2').src=url4;
+		document.getElementById('href2').href=url4;
+		document.getElementById('m1').innerHTML=name4;
+
+		document.getElementById("reports-iframe2").style.visibility = "visible";
+		document.getElementById("choose-sites2").style.display = "none";
+
+	}
+
+		if(name5!=""&& url5!="")
+	{
+		document.getElementById('reports-iframe2').src=url5;
+		document.getElementById('href2').href=url5;
+		document.getElementById('m1').innerHTML=name5;
+
+		document.getElementById("reports-iframe2").style.visibility = "visible";
+		document.getElementById("choose-sites2").style.display = "none";
+
+	}
+
+		if(name6!=""&& url6!="")
+	{
+		document.getElementById('reports-iframe2').src=url6;
+		document.getElementById('href2').href=url6;
+		document.getElementById('m1').innerHTML=name6;
+
+		document.getElementById("reports-iframe2").style.visibility = "visible";
+		document.getElementById("choose-sites2").style.display = "none";
+
+	}
 }
 
 
@@ -317,64 +394,6 @@ document.addEventListener('keyup' , function(e){
         }
     }
 });
-
-
-
-
-/*
-
-function savelinksReports () {
-    var names=[];
-    var url=[];
-    var array=[];
-    names = all(".reportname");
-    url = all(".reporturl");
-
-    
-    for (var i=0;i<3;i++)
-    {
-        
-        var rn = names[i].children[1].value;
-        var ru = url[i].children[1].value;
-       // if(rn!=""&&ru!=""){   
-            array.push({
-                    "name":rn,
-                    "url":ru
-            });
-        //}
-        
-    }
-    var linkarray = JSON.parse(localStorage.getItem("linkarray"));
-    if(linkarray==null){
-        linkarray=[];
-        for (i=0;i<3;i++)
-        {
-        linkarray.push({
-                "name":"",
-                "url":""
-
-        });
-        }
-    }
-    $("#quick-reports-adress").innerHTML="";
-     for (i=0;i<3;i++)
-    {
-        linkarray[i].name=array[i].name;
-        linkarray[i].url=array[i].url;
-        if(array[i].name!="" && array[i].url!="" ){
-            $("#quick-reports-adress").innerHTML+="<option value='"+linkarray[i].url+"'>"+linkarray[i].name+"</option>";
-        }
-    }
-    localStorage.setItem("linkarray" , JSON.stringify(linkarray));
-    setReportAdress();
-    //var link = JSON.parse(localStorage.getItem("linkarray"));
-        //updatelinksReports();
-
-}*/
-
-
-
-
 
 
 
