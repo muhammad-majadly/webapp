@@ -87,7 +87,7 @@ nav{
 .menu-caption>p:after {
     content: "";
     float: right;
-    margin: 2%;
+    margin: 1%;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
