@@ -22,28 +22,22 @@ function updateActions (data) {
 		
 	
 
-  // get the quick action data from json file
   var quickActions=data.quickActions;
-  // select all navs sections
-  var navSections = all(".nav-section");
-  for (var i = 0; i < navSections.length; i++) {
-    // set header for every nav-section
-    navSections[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + navSections[i].innerHTML;
-    // set background for every nav-section
-    navSections[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
+  var nav = all(".nav-section");
+  for (var i = 0; i < nav.length; i++) {
+    nav[i].innerHTML = "<p>" + quickActions[i].label + "</p>" + nav[i].innerHTML;
+    nav[i].style.background = "black url(./img/icons/" + quickActions[i].icon + ".png)  left 50% top 70px no-repeat";
   }
 
-  var menuCaptions = all(".menu-caption");
-  for (var i = 0; i < menuCaptions.length; i++) {
-    // menu header
-    menuCaptions[i].innerHTML = "<p>" + quickActions[i].actionsLabel + "</p>";
+  var menu = all(".menu-caption");
+  for (var i = 0; i < menu.length; i++) {
+    menu[i].innerHTML = "<p>" + quickActions[i].actionsLabel + "</p>";
   }
 
   var actionLists = all(".action-list");
   for (var i = 0; i < actionLists.length; i++) {
     actions = quickActions[i].actions;
     for (var j = 0; j < actions.length; j++) {
-      // set links
       actionLists[i].innerHTML += "<li><a href=\"" + actions[j].url + "\">" + actions[j].label + "</a></li>"
     }
   }
@@ -222,20 +216,6 @@ function loadQuickActions(data){
 
 
 
-/*$(function() {
-    $(document).keyup(function(e) {
-        switch(e.keyCode) {
-            case 37 : alert('r');
-                break;
-            case 39 : alert('l');
-                break; 
-        }
-    });
-});*/
-
-
-
-
 
 
 function init()
@@ -341,14 +321,14 @@ document.addEventListener('keyup' , function(e){
 
 
 
-
+/*
 
 function savelinksReports () {
     var names=[];
     var url=[];
     var array=[];
-    names = all(".name1");
-    url = all(".url1");
+    names = all(".reportname");
+    url = all(".reporturl");
 
     
     for (var i=0;i<3;i++)
@@ -376,14 +356,13 @@ function savelinksReports () {
         });
         }
     }
-    
-    $("#adresses-quickreports").innerHTML="";
+    $("#quick-reports-adress").innerHTML="";
      for (i=0;i<3;i++)
     {
         linkarray[i].name=array[i].name;
         linkarray[i].url=array[i].url;
         if(array[i].name!="" && array[i].url!="" ){
-            $("#adresses-quickreports").innerHTML+="<option value='"+linkarray[i].url+"'>"+linkarray[i].name+"</option>";
+            $("#quick-reports-adress").innerHTML+="<option value='"+linkarray[i].url+"'>"+linkarray[i].name+"</option>";
         }
     }
     localStorage.setItem("linkarray" , JSON.stringify(linkarray));
@@ -391,7 +370,8 @@ function savelinksReports () {
     //var link = JSON.parse(localStorage.getItem("linkarray"));
         //updatelinksReports();
 
-}
+}*/
+
 
 
 
